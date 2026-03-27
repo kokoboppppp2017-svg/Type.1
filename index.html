@@ -41,7 +41,8 @@
 
         body {
             font-family: "Pretendard", sans-serif;
-            background: var(--bg);
+            background: linear-gradient(180deg, #FAFAF8 0%, #F5EDE6 50%, #F0E4DC 100%);
+min-height: 100vh;
             color: var(--text);
             overflow-x: hidden;
             word-break: keep-all;
@@ -146,7 +147,9 @@
     padding-bottom: 64px;
     position: relative;
     overflow: hidden;
-    background: linear-gradient(160deg, #FAFAF8 0%, #F5EDE6 50%, #F0E4DC 100%); /* 이 줄 추가 */
+    background: linear-gradient(180deg, #FAFAF8 0%, #F5EDE6 50%, #F0E4DC 100%);
+min-height: 100vh;
+ /* 이 줄 추가 */
 }
         /* 배경 그라디언트 오브 */
         .hero::before {
@@ -256,7 +259,7 @@
            STATS (강점 대체)
         =========================== */
         #strengths {
-            background: var(--bg2);
+            background: linear-gradient(180deg, #F5EDE6 0%, #F0E8E0 100%);
             border-top: 1px solid rgba(255,255,255,0.05);
             border-bottom: 1px solid rgba(255,255,255,0.05);
         }
