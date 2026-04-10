@@ -1,32 +1,30 @@
+<!DOCTYPE html>
+
 <html lang="ko">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>쇼호스트 김쇼호 | 포트폴리오</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>쇼호스트 김쇼호 | 포트폴리오</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.css">
 <style>
 :root {
-    /* ── 차콜 그레이 + 로즈골드 팔레트 ── */
-    --bg:        #E8E5E1;
-    --bg2:       #DEDAD5;
-    --bg3:       #D0CBC4;
-    --card:      #F2EFEB;
-    --card2:     #FAFAF8;
-    --text:      #1A1918;
-    --muted:     #5C5955;
-    --muted2:    #9A9590;
-    --charcoal:  #2C2926;
-    --rg:        #C9956C;       /* rose gold */
-    --rg-light:  #DFBA98;
-    --rg-dark:   #A87550;
-    --border:    rgba(44,41,38,0.12);
-    --border2:   rgba(201,149,108,0.25);
-    --radius:    14px;
-    --radius-sm: 9px;
+  --bg:        #FDF5F0;
+  --bg2:       #F5EBE4;
+  --card:      #FFFFFF;
+  --text:      #2A1520;
+  --muted:     #8A6272;
+  --muted2:    #BBA0AE;
+  --pink:      #C4607E;
+  --pink-lt:   #E8A3B8;
+  --pink-dk:   #9E3D5C;
+  --plum:      #3D1E2C;
+  --border:    rgba(196,96,126,0.15);
+  --r:         14px;
+  --r-sm:      9px;
 }
 
-- { box-sizing: border-box; margin: 0; padding: 0; }
-  html { scroll-behavior: smooth; }
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
 
 body {
 font-family: “Pretendard”, sans-serif;
@@ -34,291 +32,251 @@ background: var(–bg);
 color: var(–text);
 overflow-x: hidden;
 word-break: keep-all;
-min-width: 0;
+-webkit-text-size-adjust: 100%;
 }
 
-.container {
+.wrap {
 width: 100%;
 max-width: 1040px;
 margin: 0 auto;
-padding: 0 20px;
+padding: 0 18px;
 }
 
-section { padding: 72px 0; }
+section { padding: 60px 0; }
 
-.section-label {
+.pill {
 display: inline-block;
 font-size: 10px;
 font-weight: 700;
-letter-spacing: 0.22em;
+letter-spacing: 0.2em;
 text-transform: uppercase;
-color: var(–rg-dark);
-background: rgba(201,149,108,0.12);
-border: 1px solid rgba(201,149,108,0.28);
-padding: 4px 11px;
+color: var(–pink-dk);
+background: rgba(196,96,126,0.1);
+border: 1px solid rgba(196,96,126,0.25);
+padding: 4px 12px;
 border-radius: 99px;
 margin-bottom: 12px;
 }
 
 h2 {
-font-size: 26px;
+font-size: 24px;
 font-weight: 900;
 line-height: 1.2;
-color: var(–charcoal);
+color: var(–plum);
 margin-bottom: 8px;
 }
 
-.section-sub {
+.sub {
 font-size: 14px;
 color: var(–muted);
 line-height: 1.75;
-margin-bottom: 32px;
+margin-bottom: 28px;
 }
 
-/* ─── HEADER ─── */
+/* ====== HEADER ====== */
 header {
 position: sticky;
 top: 0;
-z-index: 200;
-background: rgba(232,229,225,0.92);
-backdrop-filter: blur(18px);
--webkit-backdrop-filter: blur(18px);
+z-index: 100;
+background: rgba(253,245,240,0.93);
+backdrop-filter: blur(16px);
+-webkit-backdrop-filter: blur(16px);
 border-bottom: 1px solid var(–border);
 }
 
-.header-inner {
+.hd-inner {
 display: flex;
 align-items: center;
 justify-content: center;
-height: 54px;
+height: 52px;
 }
 
-.nav {
-display: flex;
-gap: 30px;
-}
+nav { display: flex; gap: 24px; }
 
-.nav a {
+nav a {
 text-decoration: none;
 color: var(–muted);
 font-size: 13px;
 font-weight: 600;
-letter-spacing: 0.04em;
+letter-spacing: 0.03em;
 transition: color 0.2s;
-padding: 4px 0;
 position: relative;
+padding-bottom: 2px;
 }
 
-.nav a::after {
+nav a::after {
 content: ‘’;
 position: absolute;
 bottom: -1px; left: 0;
 width: 0; height: 2px;
-background: var(–rg);
+background: var(–pink);
 border-radius: 2px;
 transition: width 0.25s;
 }
 
-.nav a:hover { color: var(–charcoal); }
-.nav a:hover::after { width: 100%; }
+nav a:hover { color: var(–plum); }
+nav a:hover::after { width: 100%; }
 
-/* ─── HERO ─── */
+/* ====== HERO ====== */
 .hero {
-padding-top: 40px;
-padding-bottom: 56px;
+padding: 36px 0 52px;
 background: var(–bg);
-overflow: hidden;
 }
 
-/* 대표 영상 썸네일 */
-.hero-featured {
-position: relative;
-border-radius: 16px;
-overflow: hidden;
-aspect-ratio: 16 / 9;
-width: 100%;
-max-width: 100%;
-background: var(–charcoal);
-box-shadow:
-0 0 0 1px rgba(201,149,108,0.22),
-0 24px 64px rgba(44,41,38,0.22),
-0 4px 16px rgba(44,41,38,0.10);
+/* 대표 영상 */
+.feat-link {
 display: block;
 text-decoration: none;
-transition: transform 0.4s cubic-bezier(.22,.68,0,1.15),
-box-shadow 0.4s ease;
-cursor: pointer;
-margin-bottom: 0;
-}
-
-.hero-featured:hover {
-transform: translateY(-5px) scale(1.005);
-box-shadow:
-0 0 0 1px rgba(201,149,108,0.38),
-0 36px 80px rgba(44,41,38,0.26),
-0 8px 24px rgba(44,41,38,0.14);
-}
-
-.hero-thumb {
+position: relative;
 width: 100%;
-height: 100%;
+border-radius: var(–r);
+overflow: hidden;
+background: var(–plum);
+box-shadow: 0 16px 48px rgba(61,30,44,0.2);
+transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.feat-link:hover {
+transform: translateY(-4px);
+box-shadow: 0 24px 64px rgba(61,30,44,0.28);
+}
+
+/* padding-top trick for 16:9 — works on all mobile browsers */
+.feat-ratio {
+position: relative;
+width: 100%;
+padding-top: 56.25%;
+}
+
+.feat-thumb {
+position: absolute;
+top: 0; left: 0;
+width: 100%; height: 100%;
 object-fit: cover;
 display: block;
-transition: transform 0.55s ease;
+transition: transform 0.5s ease;
 }
 
-.hero-featured:hover .hero-thumb {
-transform: scale(1.04);
-}
+.feat-link:hover .feat-thumb { transform: scale(1.04); }
 
-/* 전체 오버레이 */
-.hero-overlay {
+.feat-overlay {
 position: absolute;
-inset: 0;
+top: 0; left: 0; right: 0; bottom: 0;
 background: linear-gradient(
-160deg,
-rgba(44,41,38,0.38) 0%,
-rgba(44,41,38,0.08) 45%,
-rgba(201,149,108,0.22) 100%
+150deg,
+rgba(61,30,44,0.45) 0%,
+rgba(61,30,44,0.05) 50%,
+rgba(196,96,126,0.25) 100%
 );
-transition: opacity 0.3s;
 }
 
-.hero-featured:hover .hero-overlay { opacity: 0.7; }
-
-/* 플레이 버튼 */
-.play-ring {
+.play-btn {
 position: absolute;
 top: 50%; left: 50%;
 transform: translate(-50%, -50%);
-width: 72px; height: 72px;
+width: 64px; height: 64px;
 border-radius: 50%;
-background: rgba(255,255,255,0.96);
-display: flex;
-align-items: center;
-justify-content: center;
-box-shadow: 0 8px 32px rgba(44,41,38,0.28);
-transition: transform 0.35s cubic-bezier(.22,.68,0,1.5),
-background 0.2s;
+background: rgba(255,255,255,0.95);
+display: flex; align-items: center; justify-content: center;
+box-shadow: 0 8px 28px rgba(61,30,44,0.3);
+transition: transform 0.3s cubic-bezier(.22,.68,0,1.5);
 }
 
-.hero-featured:hover .play-ring {
-transform: translate(-50%, -50%) scale(1.14);
-background: #fff;
-}
+.feat-link:hover .play-btn { transform: translate(-50%, -50%) scale(1.12); }
 
-.play-ring svg {
-width: 28px; height: 28px;
-fill: var(–rg-dark);
-margin-left: 4px;
-}
+.play-btn svg { width: 26px; height: 26px; fill: var(–pink-dk); margin-left: 4px; }
 
-/* 좌하단 정보 */
-.hero-video-meta {
+.feat-meta {
 position: absolute;
 bottom: 0; left: 0; right: 0;
-padding: 36px 24px 22px;
-background: linear-gradient(to top, rgba(26,25,24,0.75) 0%, transparent 100%);
+padding: 32px 18px 18px;
+background: linear-gradient(to top, rgba(61,30,44,0.8) 0%, transparent 100%);
 }
 
-.hero-video-cat {
+.feat-cat {
 font-size: 10px;
 font-weight: 700;
 letter-spacing: 0.2em;
 text-transform: uppercase;
-color: var(–rg-light);
-margin-bottom: 5px;
+color: var(–pink-lt);
+margin-bottom: 4px;
 }
 
-.hero-video-title {
-font-size: 17px;
+.feat-title {
+font-size: 15px;
 font-weight: 800;
 color: #fff;
 line-height: 1.35;
 }
 
-/* 우상단 유튜브 뱃지 */
-.yt-badge {
+.yt-tag {
 position: absolute;
-top: 16px; right: 16px;
-display: flex;
-align-items: center;
-gap: 6px;
-background: rgba(26,25,24,0.6);
-backdrop-filter: blur(10px);
+top: 14px; right: 14px;
+display: flex; align-items: center; gap: 5px;
+background: rgba(61,30,44,0.6);
+backdrop-filter: blur(8px);
 border-radius: 99px;
-padding: 5px 12px 5px 9px;
+padding: 5px 11px 5px 8px;
 }
 
-.yt-badge svg {
-width: 15px; height: 15px;
-fill: #ff0000;
-flex-shrink: 0;
-}
+.yt-tag svg { width: 14px; height: 14px; fill: #ff0000; }
+.yt-tag span { font-size: 11px; font-weight: 700; color: #fff; }
 
-.yt-badge span {
-font-size: 11px;
-font-weight: 700;
-color: #fff;
-letter-spacing: 0.04em;
-}
-
-/* 영상 아래 이름 영역 */
-.hero-identity {
-margin-top: 36px;
+/* 이름 영역 */
+.hero-id {
+margin-top: 28px;
 text-align: center;
 }
 
 .hero-role {
-font-size: 11px;
+font-size: 10px;
 font-weight: 700;
-letter-spacing: 0.24em;
+letter-spacing: 0.22em;
 text-transform: uppercase;
-color: var(–rg-dark);
-margin-bottom: 10px;
+color: var(–pink);
+margin-bottom: 8px;
 }
 
 .hero-name {
-font-size: clamp(2.8rem, 10vw, 4.4rem);
+font-size: clamp(3rem, 11vw, 5rem);
 font-weight: 900;
 line-height: 1;
-letter-spacing: -0.025em;
-color: var(–rg-dark);
-margin-bottom: 14px;
+letter-spacing: -0.03em;
+color: var(–plum);
+margin-bottom: 16px;
 }
 
-.hero-tagline {
-font-size: 15px;
-color: var(–muted);
-line-height: 1.75;
-max-width: 400px;
-margin: 0 auto 22px;
-}
-
-/* 강한 후킹 문구 */
 .hero-hook {
 display: inline-block;
 font-size: 13px;
 font-weight: 800;
-color: var(–charcoal);
-background: rgba(201,149,108,0.13);
-border-left: 3px solid var(–rg);
+color: var(–plum);
+background: rgba(196,96,126,0.1);
+border-left: 3px solid var(–pink);
 padding: 10px 16px;
-border-radius: 0 var(–radius-sm) var(–radius-sm) 0;
-margin-bottom: 22px;
+border-radius: 0 var(–r-sm) var(–r-sm) 0;
 text-align: left;
+margin-bottom: 18px;
+max-width: 100%;
 }
 
-.hero-badges {
+.hero-tagline {
+font-size: 14px;
+color: var(–muted);
+line-height: 1.75;
+margin-bottom: 20px;
+}
+
+.badges {
 display: flex;
 flex-wrap: wrap;
-gap: 8px;
+gap: 7px;
 justify-content: center;
 }
 
 .badge {
-background: rgba(44,41,38,0.08);
-border: 1px solid rgba(44,41,38,0.14);
+background: rgba(61,30,44,0.07);
+border: 1px solid rgba(61,30,44,0.12);
 color: var(–muted);
 padding: 5px 12px;
 border-radius: 99px;
@@ -326,319 +284,293 @@ font-size: 12px;
 font-weight: 600;
 }
 
-/* ─── STRENGTHS ─── */
+/* ====== STRENGTHS ====== */
 #strengths {
-background-color: #2C2926 !important;
-padding: 64px 0;
+background: var(–plum);
+padding: 60px 0;
 }
 
-#strengths .section-label {
-color: var(–rg-light);
-background: rgba(201,149,108,0.15);
-border-color: rgba(201,149,108,0.3);
+#strengths .pill {
+color: var(–pink-lt);
+background: rgba(232,163,184,0.15);
+border-color: rgba(232,163,184,0.3);
 }
 
-#strengths h2 {
-color: #F0EDE8;
-}
+#strengths h2 { color: #F8EEF3; }
+#strengths .sub { color: rgba(248,238,243,0.55); margin-bottom: 28px; }
 
-#strengths .section-sub {
-color: rgba(240,237,232,0.55);
-}
-
-.stats-header { text-align: center; margin-bottom: 36px; }
+.stats-hd { text-align: center; margin-bottom: 28px; }
 
 .stats-grid {
 display: grid;
-grid-template-columns: repeat(2, 1fr);
+grid-template-columns: 1fr 1fr;
 gap: 10px;
 }
 
 .stat-card {
-background: rgba(255,255,255,0.05);
-border: 1px solid rgba(255,255,255,0.08);
-border-radius: var(–radius);
-padding: 24px 20px;
+background: rgba(255,255,255,0.07);
+border: 1px solid rgba(255,255,255,0.1);
+border-radius: var(–r);
+padding: 22px 16px;
 text-align: center;
 position: relative;
 overflow: hidden;
-transition: transform 0.25s, border-color 0.25s;
+transition: transform 0.2s;
 }
 
-.stat-card::after {
+.stat-card::before {
 content: ‘’;
 position: absolute;
 top: 0; left: 0; right: 0;
 height: 2px;
-background: linear-gradient(90deg, var(–rg), var(–rg-light));
+background: linear-gradient(90deg, var(–pink), var(–pink-lt));
 opacity: 0;
-transition: opacity 0.25s;
+transition: opacity 0.2s;
 }
 
-.stat-card:hover { transform: translateY(-3px); border-color: rgba(201,149,108,0.3); }
-.stat-card:hover::after { opacity: 1; }
+.stat-card:hover { transform: translateY(-3px); }
+.stat-card:hover::before { opacity: 1; }
 
-.stat-number {
-font-size: 2.4rem;
+.stat-num {
+font-size: 2.2rem;
 font-weight: 900;
-color: var(–rg-light);
+color: var(–pink-lt);
 line-height: 1;
 margin-bottom: 8px;
 }
 
-.stat-unit { font-size: 1.2rem; }
+.stat-unit { font-size: 1.1rem; }
 
-.stat-label {
+.stat-lbl {
 font-size: 12px;
 font-weight: 700;
-color: rgba(240,237,232,0.75);
+color: rgba(248,238,243,0.8);
 margin-bottom: 4px;
 }
 
 .stat-desc {
 font-size: 11px;
-color: rgba(240,237,232,0.45);
+color: rgba(248,238,243,0.45);
 line-height: 1.5;
 }
 
-/* ─── CAREER ─── */
+/* ====== CAREER ====== */
 #career { background: var(–bg2); }
 
-.career-header { text-align: center; margin-bottom: 32px; }
+.sec-hd { text-align: center; margin-bottom: 28px; }
 
 .career-grid { display: grid; gap: 12px; }
 
-.career-block {
-background: var(–card2);
+.cblock {
+background: var(–card);
 border: 1px solid var(–border);
-border-radius: var(–radius);
-padding: 22px;
+border-radius: var(–r);
+padding: 20px;
 }
 
-.career-block-title {
+.cblock-title {
 font-size: 10px;
 font-weight: 800;
 letter-spacing: 0.18em;
 text-transform: uppercase;
-color: var(–rg-dark);
-margin-bottom: 16px;
+color: var(–pink-dk);
+margin-bottom: 14px;
 }
 
-.career-list li {
+.clist li {
 list-style: none;
 display: flex;
-gap: 14px;
-padding: 12px 0;
+gap: 12px;
+padding: 11px 0;
 border-bottom: 1px solid var(–border);
 align-items: flex-start;
 }
 
-.career-list li:last-child { border-bottom: none; padding-bottom: 0; }
-.career-list li:first-child { padding-top: 0; }
+.clist li:last-child { border-bottom: none; padding-bottom: 0; }
+.clist li:first-child { padding-top: 0; }
 
-.career-year {
-font-size: 12px;
+.cyear {
+font-size: 11px;
 font-weight: 700;
-color: var(–rg-dark);
+color: var(–pink);
 white-space: nowrap;
 margin-top: 2px;
-min-width: 78px;
+min-width: 74px;
 }
 
-.career-desc strong {
+.cdesc strong {
 display: block;
-font-size: 14px;
+font-size: 13px;
 font-weight: 700;
-color: var(–charcoal);
+color: var(–plum);
 margin-bottom: 2px;
 }
 
-.career-desc span {
-font-size: 12px;
-color: var(–muted);
-}
+.cdesc span { font-size: 12px; color: var(–muted); }
 
-.achieve-list li {
+.alist li {
 list-style: none;
 display: flex;
 align-items: flex-start;
-gap: 10px;
-padding: 10px 0;
+gap: 9px;
+padding: 9px 0;
 border-bottom: 1px solid var(–border);
-font-size: 14px;
+font-size: 13px;
 line-height: 1.55;
 color: var(–muted);
 }
 
-.achieve-list li:last-child { border-bottom: none; padding-bottom: 0; }
-.achieve-list li:first-child { padding-top: 0; }
+.alist li:last-child { border-bottom: none; padding-bottom: 0; }
+.alist li:first-child { padding-top: 0; }
 
-.achieve-list li::before {
+.alist li::before {
 content: ‘✦’;
-color: var(–rg);
+color: var(–pink);
 font-size: 9px;
 margin-top: 5px;
 flex-shrink: 0;
 }
 
-/* ─── VIDEOS (세로형 9:16) ─── */
+/* ====== VIDEOS ====== */
 #videos {
-background-color: #2C2926 !important;
-padding: 64px 0;
+background: var(–plum);
+padding: 60px 0;
 }
 
-#videos .section-label {
-color: var(–rg-light);
-background: rgba(201,149,108,0.15);
-border-color: rgba(201,149,108,0.3);
+#videos .pill {
+color: var(–pink-lt);
+background: rgba(232,163,184,0.15);
+border-color: rgba(232,163,184,0.3);
 }
 
-#videos h2 { color: #F0EDE8; }
-#videos .section-sub { color: rgba(240,237,232,0.55); }
+#videos h2 { color: #F8EEF3; }
+#videos .sub { color: rgba(248,238,243,0.55); margin-bottom: 28px; }
 
-.videos-header { text-align: center; margin-bottom: 28px; }
+.vids-hd { text-align: center; margin-bottom: 24px; }
 
-.videos-scroll {
+.vids-scroll {
 display: flex;
 gap: 12px;
 overflow-x: auto;
 scroll-snap-type: x mandatory;
-padding-bottom: 12px;
 -webkit-overflow-scrolling: touch;
 scrollbar-width: none;
+padding-bottom: 4px;
 }
 
-.videos-scroll::-webkit-scrollbar { display: none; }
+.vids-scroll::-webkit-scrollbar { display: none; }
 
 .vcard {
-flex: 0 0 62vw;
-max-width: 220px;
+flex: 0 0 160px;
 scroll-snap-align: start;
-border-radius: var(–radius);
+border-radius: var(–r);
 overflow: hidden;
 background: rgba(255,255,255,0.06);
-border: 1px solid rgba(255,255,255,0.08);
-box-shadow: 0 8px 30px rgba(0,0,0,0.3);
+border: 1px solid rgba(255,255,255,0.1);
 }
 
-/* 9:16 세로형 */
-.video-frame {
+/* 9:16 세로 — padding-top trick */
+.vframe {
 position: relative;
 width: 100%;
-aspect-ratio: 9 / 16;
+padding-top: 177.78%;
 background: #000;
 }
 
-.video-frame iframe {
+.vframe iframe {
 position: absolute;
-inset: 0;
-width: 100%;
-height: 100%;
-border: 0;
+top: 0; left: 0;
+width: 100%; height: 100%;
+border: none;
 }
 
-.vcard-info {
-padding: 12px 14px;
-}
+.vinfo { padding: 10px 12px; }
 
-.vcard-category {
-font-size: 10px;
+.vcat {
+font-size: 9px;
 font-weight: 700;
 letter-spacing: 0.14em;
-color: var(–rg-light);
+color: var(–pink-lt);
 text-transform: uppercase;
-margin-bottom: 4px;
-}
-
-.vcard-title {
-font-size: 13px;
-font-weight: 700;
-color: rgba(240,237,232,0.9);
-}
-
-/* ─── GALLERY ─── */
-#gallery { background: var(–bg2); }
-
-.gallery-header { text-align: center; margin-bottom: 24px; }
-
-.gallery-grid {
-display: grid;
-grid-template-columns: repeat(2, 1fr);
-gap: 8px;
-}
-
-.gallery-item {
-border-radius: var(–radius-sm);
-overflow: hidden;
-aspect-ratio: 3/4;
-background: var(–card);
-position: relative;
-}
-
-.gallery-item img {
-width: 100%;
-height: 100%;
-object-fit: cover;
-transition: transform 0.45s;
-display: block;
-}
-
-.gallery-item:hover img { transform: scale(1.05); }
-
-.gallery-item:first-child {
-grid-column: 1 / -1;
-aspect-ratio: 4/3;
-}
-
-@media (max-width: 768px) {
-.gallery-item:last-child {
-grid-column: 1 / -1;
-aspect-ratio: 4/3;
-}
-}
-
-/* ─── CONTACT ─── */
-#contact {
-background: var(–bg);
-border-top: 1px solid var(–border);
-padding-bottom: 80px;
-}
-
-.contact-header { text-align: center; margin-bottom: 36px; }
-
-.contact-wrap {
-display: flex;
-flex-direction: column;
-gap: 12px;
-max-width: 580px;
-margin: 0 auto;
-}
-
-.contact-cta {
-display: flex;
-flex-direction: column;
-align-items: flex-start;
-gap: 14px;
-background: var(–charcoal);
-border-radius: var(–radius);
-padding: 26px 24px;
-}
-
-.contact-cta-text p {
-font-size: 17px;
-font-weight: 900;
-color: #F0EDE8;
 margin-bottom: 3px;
 }
 
-.contact-cta-text span {
-font-size: 13px;
-color: rgba(240,237,232,0.5);
+.vtitle {
+font-size: 12px;
+font-weight: 700;
+color: rgba(248,238,243,0.9);
+line-height: 1.4;
+}
+
+/* ====== GALLERY ====== */
+#gallery { background: var(–bg); }
+
+.glry-grid {
+display: grid;
+grid-template-columns: 1fr 1fr;
+gap: 8px;
+}
+
+.glry-item {
+border-radius: var(–r-sm);
+overflow: hidden;
+aspect-ratio: 3/4;
+background: var(–bg2);
+}
+
+.glry-item img {
+width: 100%; height: 100%;
+object-fit: cover;
+display: block;
+transition: transform 0.4s;
+}
+
+.glry-item:hover img { transform: scale(1.05); }
+
+.glry-item:first-child {
+grid-column: 1 / -1;
+aspect-ratio: 4/3;
+}
+
+/* ====== CONTACT ====== */
+#contact {
+background: var(–bg2);
+padding-bottom: 80px;
+}
+
+.ct-wrap {
+display: flex;
+flex-direction: column;
+gap: 12px;
+max-width: 560px;
+margin: 0 auto;
+}
+
+.ct-cta {
+background: var(–plum);
+border-radius: var(–r);
+padding: 24px 20px;
+display: flex;
+flex-direction: column;
+gap: 14px;
+}
+
+.ct-cta-text p {
+font-size: 16px;
+font-weight: 900;
+color: #F8EEF3;
+margin-bottom: 3px;
+}
+
+.ct-cta-text span {
+font-size: 12px;
+color: rgba(248,238,243,0.5);
 }
 
 .btn-kakao {
-display: inline-flex;
+display: flex;
 align-items: center;
+justify-content: center;
 gap: 8px;
 background: #FEE500;
 color: #191919;
@@ -646,176 +578,143 @@ text-decoration: none;
 font-weight: 800;
 font-size: 14px;
 padding: 13px 20px;
-border-radius: var(–radius-sm);
-width: 100%;
-justify-content: center;
+border-radius: var(–r-sm);
 transition: opacity 0.2s, transform 0.15s;
 }
 
 .btn-kakao:hover { opacity: 0.9; transform: translateY(-1px); }
 .btn-kakao svg { width: 20px; height: 20px; flex-shrink: 0; }
 
-.contact-email {
+.ct-email {
 display: flex;
 align-items: center;
 gap: 14px;
-background: var(–card2);
+background: var(–card);
 border: 1px solid var(–border);
-border-radius: var(–radius);
-padding: 18px 20px;
+border-radius: var(–r);
+padding: 16px 18px;
 text-decoration: none;
 transition: border-color 0.2s, transform 0.15s;
 }
 
-.contact-email:hover {
-border-color: rgba(201,149,108,0.4);
+.ct-email:hover {
+border-color: rgba(196,96,126,0.4);
 transform: translateY(-2px);
 }
 
-.contact-email-icon {
+.ct-email-icon {
 width: 40px; height: 40px;
 border-radius: 10px;
-background: rgba(201,149,108,0.12);
-display: flex;
-align-items: center;
-justify-content: center;
+background: rgba(196,96,126,0.1);
+display: flex; align-items: center; justify-content: center;
 flex-shrink: 0;
 }
 
-.contact-email-icon svg {
-width: 20px; height: 20px;
-stroke: var(–rg-dark);
-}
+.ct-email-icon svg { width: 20px; height: 20px; stroke: var(–pink-dk); }
 
-.contact-email-text strong {
+.ct-email-text strong {
 display: block;
 font-size: 13px;
 font-weight: 700;
-color: var(–charcoal);
+color: var(–plum);
 }
 
-.contact-email-text span {
-font-size: 12px;
-color: var(–muted);
-}
+.ct-email-text span { font-size: 12px; color: var(–muted); }
+.ct-email-arrow { margin-left: auto; color: var(–muted2); }
 
-.contact-email-arrow { margin-left: auto; color: var(–muted2); }
-
-.contact-sns-row {
-display: grid;
-grid-template-columns: 1fr 1fr;
-gap: 10px;
-}
+.ct-sns { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
 
 .sns-card {
 display: flex;
 flex-direction: column;
 align-items: center;
-gap: 10px;
-background: var(–card2);
+gap: 9px;
+background: var(–card);
 border: 1px solid var(–border);
-border-radius: var(–radius);
-padding: 20px 16px;
+border-radius: var(–r);
+padding: 18px 14px;
 text-decoration: none;
 transition: border-color 0.2s, transform 0.15s;
 }
 
 .sns-card:hover { transform: translateY(-3px); }
-.sns-card.instagram:hover { border-color: rgba(225,48,108,0.4); }
-.sns-card.youtube:hover   { border-color: rgba(255,0,0,0.4); }
+.sns-card.ig:hover { border-color: rgba(225,48,108,0.4); }
+.sns-card.yt:hover { border-color: rgba(255,0,0,0.4); }
 
 .sns-icon {
 width: 44px; height: 44px;
 border-radius: 12px;
-display: flex;
-align-items: center;
-justify-content: center;
+display: flex; align-items: center; justify-content: center;
 }
 
-.sns-icon.ig { background: linear-gradient(135deg, #f9ce34, #ee2a7b, #6228d7); }
-.sns-icon.yt { background: #ff0000; }
-.sns-icon svg { width: 24px; height: 24px; fill: white; }
+.sns-icon.ig-bg { background: linear-gradient(135deg, #f9ce34, #ee2a7b, #6228d7); }
+.sns-icon.yt-bg { background: #ff0000; }
+.sns-icon svg { width: 24px; height: 24px; fill: #fff; }
 
-.sns-card-label {
-font-size: 13px;
-font-weight: 800;
-color: var(–charcoal);
-}
+.sns-lbl { font-size: 13px; font-weight: 800; color: var(–plum); }
+.sns-sub { font-size: 11px; color: var(–muted); }
 
-.sns-card-sub {
-font-size: 11px;
-color: var(–muted);
-}
-
-/* ─── FOOTER ─── */
+/* ====== FOOTER ====== */
 footer {
 text-align: center;
-padding: 24px 20px;
-background: var(–charcoal);
-border-top: 1px solid rgba(255,255,255,0.06);
+padding: 22px 20px;
+background: var(–plum);
 font-size: 12px;
-color: rgba(240,237,232,0.35);
+color: rgba(248,238,243,0.3);
 }
 
-/* ─── PC (768px+) ─── */
+/* ====== PC 768px+ ====== */
 @media (min-width: 768px) {
-section { padding: 100px 0; }
-h2 { font-size: 34px; }
+section { padding: 96px 0; }
+#strengths, #videos { padding: 96px 0; }
+h2 { font-size: 32px; }
 
-```
-.hero-identity { text-align: left; }
-.hero-badges { justify-content: flex-start; }
-.hero-tagline { margin: 0 0 20px; }
-.hero-hook { margin-bottom: 20px; }
+.hero-id { text-align: left; }
+.badges { justify-content: flex-start; }
 
-.play-ring {
-    width: 84px; height: 84px;
-}
-.play-ring svg { width: 34px; height: 34px; }
-.hero-video-title { font-size: 22px; }
+.play-btn { width: 80px; height: 80px; }
+.play-btn svg { width: 32px; height: 32px; }
+.feat-title { font-size: 20px; }
 
 .stats-grid { grid-template-columns: repeat(4, 1fr); }
 
 .career-grid { grid-template-columns: 1fr 1fr; }
 
-.videos-scroll {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    overflow-x: visible;
-    padding-bottom: 0;
+.vids-scroll {
+display: grid;
+grid-template-columns: repeat(4, 1fr);
+overflow-x: visible;
+padding-bottom: 0;
 }
 
-.vcard { flex: none; max-width: none; }
+.vcard { flex: none; }
 
-.gallery-grid { grid-template-columns: repeat(4, 1fr); }
-.gallery-item:first-child { grid-column: auto; aspect-ratio: 3/4; }
+.glry-grid { grid-template-columns: repeat(4, 1fr); }
+.glry-item:first-child { grid-column: auto; aspect-ratio: 3/4; }
 
-.contact-cta {
-    flex-direction: row;
-    align-items: center;
+.ct-cta { flex-direction: row; align-items: center; }
+.ct-cta-text { flex: 1; }
+.btn-kakao { white-space: nowrap; }
 }
-.contact-cta-text { flex: 1; }
-.btn-kakao { width: auto; white-space: nowrap; }
-```
 
+@media (max-width: 767px) {
+.glry-item:last-child { grid-column: 1 / -1; aspect-ratio: 4/3; }
 }
 </style>
 
 </head>
 <body>
 
-<!-- HEADER -->
-
 <header>
-    <div class="container header-inner">
-        <nav class="nav">
-            <a href="#strengths">강점</a>
-            <a href="#career">경력</a>
-            <a href="#videos">레퍼런스</a>
-            <a href="#gallery">갤러리</a>
-            <a href="#contact">연락처</a>
-        </nav>
-    </div>
+  <div class="wrap hd-inner">
+    <nav>
+      <a href="#strengths">강점</a>
+      <a href="#career">경력</a>
+      <a href="#videos">레퍼런스</a>
+      <a href="#gallery">갤러리</a>
+      <a href="#contact">연락처</a>
+    </nav>
+  </div>
 </header>
 
 <main>
@@ -823,67 +722,43 @@ h2 { font-size: 34px; }
 <!-- HERO -->
 
 <section class="hero">
-<div class="container">
+<div class="wrap">
 
-```
-<!--
-    ★ 대표 영상
-    href → 유튜브 영상 URL로 교체
-    img src → https://img.youtube.com/vi/VIDEO_ID/maxresdefault.jpg 로 교체
--->
-<a
-    href="https://www.youtube.com/watch?v=VIDEO_ID"
-    class="hero-featured"
-    target="_blank"
-    rel="noopener"
->
-    <img
+  <a href="https://www.youtube.com/watch?v=VIDEO_ID" class="feat-link" target="_blank" rel="noopener">
+    <div class="feat-ratio">
+      <img
         src="https://img.youtube.com/vi/VIDEO_ID/maxresdefault.jpg"
         alt="대표 영상 썸네일"
-        class="hero-thumb"
-        onerror="this.src='https://placehold.co/1280x720/2C2926/C9956C?text=대표+영상'"
-    >
-    <div class="hero-overlay"></div>
-
-    <div class="play-ring">
+        class="feat-thumb"
+        onerror="this.src='https://placehold.co/1280x720/3D1E2C/E8A3B8?text=대표+영상'"
+      >
+      <div class="feat-overlay"></div>
+      <div class="play-btn">
         <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
-    </div>
-
-    <div class="hero-video-meta">
-        <div class="hero-video-cat">Featured Video</div>
-        <div class="hero-video-title">영상 제목을 여기에 입력해주세요</div>
-    </div>
-
-    <div class="yt-badge">
-        <svg viewBox="0 0 24 24">
-            <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
-        </svg>
+      </div>
+      <div class="feat-meta">
+        <div class="feat-cat">Featured Video</div>
+        <div class="feat-title">영상 제목을 여기에 입력해주세요</div>
+      </div>
+      <div class="yt-tag">
+        <svg viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
         <span>YouTube에서 보기</span>
+      </div>
     </div>
-</a>
+  </a>
 
-<!-- 이름 + 후킹 -->
-<div class="hero-identity">
+  <div class="hero-id">
     <div class="hero-role">Show Host · Live Commerce · Announcer</div>
     <div class="hero-name">김쇼호</div>
-
-    <div class="hero-hook">
-        "말 한 마디로 매출이 바뀝니다 — 직접 증명했습니다."
+    <div class="hero-hook">"말 한 마디로 매출이 바뀝니다 — 직접 증명했습니다."</div>
+    <p class="hero-tagline">3년간 뷰티·패션·리빙 전 카테고리<br>평균 전환율 15%, 목표 매출 320% 달성</p>
+    <div class="badges">
+      <span class="badge"># 높은 전환율</span>
+      <span class="badge"># 꼼꼼한 상품 분석</span>
+      <span class="badge"># 기획 · 연출</span>
+      <span class="badge"># 네이버 쇼핑라이브</span>
     </div>
-
-    <p class="hero-tagline">
-        3년간 뷰티·패션·리빙 전 카테고리<br>
-        평균 전환율 15%, 목표 매출 320% 달성
-    </p>
-
-    <div class="hero-badges">
-        <span class="badge"># 높은 전환율</span>
-        <span class="badge"># 꼼꼼한 상품 분석</span>
-        <span class="badge"># 기획 · 연출</span>
-        <span class="badge"># 네이버 쇼핑라이브</span>
-    </div>
-</div>
-```
+  </div>
 
 </div>
 </section>
@@ -891,275 +766,223 @@ h2 { font-size: 34px; }
 <!-- STRENGTHS -->
 
 <section id="strengths">
-    <div class="container">
-        <div class="stats-header">
-            <div class="section-label">Numbers</div>
-            <h2>숫자로 말합니다</h2>
-            <p class="section-sub">추상적인 말 대신, 실제 방송에서 만들어낸 결과입니다.</p>
-        </div>
-
-```
-    <div class="stats-grid">
-        <div class="stat-card">
-            <div class="stat-number">15<span class="stat-unit">%+</span></div>
-            <div class="stat-label">평균 구매 전환율</div>
-            <div class="stat-desc">업계 평균 대비<br>2배 이상 달성</div>
-        </div>
-        <div class="stat-card">
-            <div class="stat-number">320<span class="stat-unit">%</span></div>
-            <div class="stat-label">목표 매출 달성</div>
-            <div class="stat-desc">N사 뷰티 런칭 방송<br>역대 최고 기록</div>
-        </div>
-        <div class="stat-card">
-            <div class="stat-number">10<span class="stat-unit">만</span></div>
-            <div class="stat-label">동시 시청자</div>
-            <div class="stat-desc">S사 리빙 라이브<br>단일 방송 달성</div>
-        </div>
-        <div class="stat-card">
-            <div class="stat-number">3<span class="stat-unit">년+</span></div>
-            <div class="stat-label">라이브 커머스 경력</div>
-            <div class="stat-desc">뷰티 · 패션 · 리빙<br>전 카테고리 경험</div>
-        </div>
+<div class="wrap">
+  <div class="stats-hd">
+    <div class="pill">Numbers</div>
+    <h2>숫자로 말합니다</h2>
+    <p class="sub">추상적인 말 대신, 실제 방송에서 만들어낸 결과입니다.</p>
+  </div>
+  <div class="stats-grid">
+    <div class="stat-card">
+      <div class="stat-num">15<span class="stat-unit">%+</span></div>
+      <div class="stat-lbl">평균 구매 전환율</div>
+      <div class="stat-desc">업계 평균 대비<br>2배 이상 달성</div>
     </div>
+    <div class="stat-card">
+      <div class="stat-num">320<span class="stat-unit">%</span></div>
+      <div class="stat-lbl">목표 매출 달성</div>
+      <div class="stat-desc">N사 뷰티 런칭 방송<br>역대 최고 기록</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-num">10<span class="stat-unit">만</span></div>
+      <div class="stat-lbl">동시 시청자</div>
+      <div class="stat-desc">S사 리빙 라이브<br>단일 방송 달성</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-num">3<span class="stat-unit">년+</span></div>
+      <div class="stat-lbl">라이브 커머스 경력</div>
+      <div class="stat-desc">뷰티 · 패션 · 리빙<br>전 카테고리 경험</div>
+    </div>
+  </div>
 </div>
-```
-
 </section>
 
 <!-- CAREER -->
 
 <section id="career">
-    <div class="container">
-        <div class="career-header">
-            <div class="section-label">Career</div>
-            <h2>경력 및 주요 성과</h2>
-        </div>
-
-```
-    <div class="career-grid">
-
-        <div class="career-block">
-            <div class="career-block-title">Experience</div>
-            <ul class="career-list">
-                <li>
-                    <div class="career-year">2023 – 현재</div>
-                    <div class="career-desc">
-                        <strong>네이버 쇼핑라이브</strong>
-                        <span>뷰티 · 패션 카테고리 전담 호스트</span>
-                    </div>
-                </li>
-                <li>
-                    <div class="career-year">2021 – 2023</div>
-                    <div class="career-desc">
-                        <strong>김쇼호 MCN 라이브 커머스팀</strong>
-                        <span>소속 호스트 · 콘텐츠 기획 참여</span>
-                    </div>
-                </li>
-                <li>
-                    <div class="career-year">2020 – 2021</div>
-                    <div class="career-desc">
-                        <strong>김쇼호 쇼핑몰 자사 라이브</strong>
-                        <span>라이브 커머스 진행 첫 데뷔</span>
-                    </div>
-                </li>
-            </ul>
-        </div>
-
-        <div class="career-block">
-            <div class="career-block-title">Achievement</div>
-            <ul class="achieve-list">
-                <li>N사 뷰티 브랜드 런칭 방송, 목표 매출 320% 달성</li>
-                <li>S사 리빙 라이브, 동시 시청자 10만 명 돌파</li>
-                <li>F사 패션 시즌오프 방송, 1시간 내 전 상품 완판</li>
-                <li>월 평균 구매 전환율 15% 이상 꾸준히 유지</li>
-                <li>방송 전 직접 상품 사용 후 리뷰 루틴 정착</li>
-            </ul>
-        </div>
-
+<div class="wrap">
+  <div class="sec-hd">
+    <div class="pill">Career</div>
+    <h2>경력 및 주요 성과</h2>
+  </div>
+  <div class="career-grid">
+    <div class="cblock">
+      <div class="cblock-title">Experience</div>
+      <ul class="clist">
+        <li>
+          <div class="cyear">2023 – 현재</div>
+          <div class="cdesc">
+            <strong>네이버 쇼핑라이브</strong>
+            <span>뷰티 · 패션 카테고리 전담 호스트</span>
+          </div>
+        </li>
+        <li>
+          <div class="cyear">2021 – 2023</div>
+          <div class="cdesc">
+            <strong>김쇼호 MCN 라이브 커머스팀</strong>
+            <span>소속 호스트 · 콘텐츠 기획 참여</span>
+          </div>
+        </li>
+        <li>
+          <div class="cyear">2020 – 2021</div>
+          <div class="cdesc">
+            <strong>김쇼호 쇼핑몰 자사 라이브</strong>
+            <span>라이브 커머스 진행 첫 데뷔</span>
+          </div>
+        </li>
+      </ul>
     </div>
+    <div class="cblock">
+      <div class="cblock-title">Achievement</div>
+      <ul class="alist">
+        <li>N사 뷰티 브랜드 런칭 방송, 목표 매출 320% 달성</li>
+        <li>S사 리빙 라이브, 동시 시청자 10만 명 돌파</li>
+        <li>F사 패션 시즌오프 방송, 1시간 내 전 상품 완판</li>
+        <li>월 평균 구매 전환율 15% 이상 꾸준히 유지</li>
+        <li>방송 전 직접 상품 사용 후 리뷰 루틴 정착</li>
+      </ul>
+    </div>
+  </div>
 </div>
-```
-
 </section>
 
 <!-- VIDEOS -->
 
 <section id="videos">
-    <div class="container">
-        <div class="videos-header">
-            <div class="section-label">Reference</div>
-            <h2>레퍼런스 영상</h2>
-            <p class="section-sub">실제 방송 화면을 확인해보세요.</p>
-        </div>
-
-```
-    <div class="videos-scroll">
-
-        <div class="vcard">
-            <div class="video-frame">
-                <iframe
-                    src="https://www.youtube.com/embed/VIDEO_ID_1?rel=0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowfullscreen
-                ></iframe>
-            </div>
-            <div class="vcard-info">
-                <div class="vcard-category">Beauty</div>
-                <div class="vcard-title">뷰티 브랜드 런칭 라이브</div>
-            </div>
-        </div>
-
-        <div class="vcard">
-            <div class="video-frame">
-                <iframe
-                    src="https://www.youtube.com/embed/VIDEO_ID_2?rel=0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowfullscreen
-                ></iframe>
-            </div>
-            <div class="vcard-info">
-                <div class="vcard-category">Fashion</div>
-                <div class="vcard-title">패션 브랜드 시즌 런칭</div>
-            </div>
-        </div>
-
-        <div class="vcard">
-            <div class="video-frame">
-                <iframe
-                    src="https://www.youtube.com/embed/VIDEO_ID_3?rel=0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowfullscreen
-                ></iframe>
-            </div>
-            <div class="vcard-info">
-                <div class="vcard-category">Living</div>
-                <div class="vcard-title">리빙 제품 심층 시연</div>
-            </div>
-        </div>
-
-        <div class="vcard">
-            <div class="video-frame">
-                <iframe
-                    src="https://www.youtube.com/embed/VIDEO_ID_4?rel=0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowfullscreen
-                ></iframe>
-            </div>
-            <div class="vcard-info">
-                <div class="vcard-category">Digital</div>
-                <div class="vcard-title">가전 제품 완전 분석</div>
-            </div>
-        </div>
-
+<div class="wrap">
+  <div class="vids-hd">
+    <div class="pill">Reference</div>
+    <h2>레퍼런스 영상</h2>
+    <p class="sub">실제 방송 화면을 확인해보세요.</p>
+  </div>
+  <div class="vids-scroll">
+    <div class="vcard">
+      <div class="vframe">
+        <iframe src="https://www.youtube.com/embed/VIDEO_ID_1?rel=0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+      <div class="vinfo">
+        <div class="vcat">Beauty</div>
+        <div class="vtitle">뷰티 브랜드 런칭 라이브</div>
+      </div>
     </div>
+    <div class="vcard">
+      <div class="vframe">
+        <iframe src="https://www.youtube.com/embed/VIDEO_ID_2?rel=0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+      <div class="vinfo">
+        <div class="vcat">Fashion</div>
+        <div class="vtitle">패션 브랜드 시즌 런칭</div>
+      </div>
+    </div>
+    <div class="vcard">
+      <div class="vframe">
+        <iframe src="https://www.youtube.com/embed/VIDEO_ID_3?rel=0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+      <div class="vinfo">
+        <div class="vcat">Living</div>
+        <div class="vtitle">리빙 제품 심층 시연</div>
+      </div>
+    </div>
+    <div class="vcard">
+      <div class="vframe">
+        <iframe src="https://www.youtube.com/embed/VIDEO_ID_4?rel=0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+      <div class="vinfo">
+        <div class="vcat">Digital</div>
+        <div class="vtitle">가전 제품 완전 분석</div>
+      </div>
+    </div>
+  </div>
 </div>
-```
-
 </section>
 
 <!-- GALLERY -->
 
 <section id="gallery">
-    <div class="container">
-        <div class="gallery-header">
-            <div class="section-label">Gallery</div>
-            <h2>갤러리</h2>
-        </div>
-
-```
-    <div class="gallery-grid">
-        <div class="gallery-item">
-            <img src="gallery1.jpg" alt="갤러리" onerror="this.src='https://placehold.co/800x600/2C2926/C9956C?text=1'">
-        </div>
-        <div class="gallery-item">
-            <img src="gallery2.jpg" alt="갤러리" onerror="this.src='https://placehold.co/600x800/2C2926/DFBA98?text=2'">
-        </div>
-        <div class="gallery-item">
-            <img src="gallery3.jpg" alt="갤러리" onerror="this.src='https://placehold.co/600x800/2C2926/C9956C?text=3'">
-        </div>
-        <div class="gallery-item">
-            <img src="gallery4.jpg" alt="갤러리" onerror="this.src='https://placehold.co/600x800/2C2926/DFBA98?text=4'">
-        </div>
-        <div class="gallery-item">
-            <img src="gallery5.jpg" alt="갤러리" onerror="this.src='https://placehold.co/600x800/2C2926/C9956C?text=5'">
-        </div>
-        <div class="gallery-item">
-            <img src="gallery6.jpg" alt="갤러리" onerror="this.src='https://placehold.co/600x800/2C2926/DFBA98?text=6'">
-        </div>
-        <div class="gallery-item">
-            <img src="gallery7.jpg" alt="갤러리" onerror="this.src='https://placehold.co/600x800/2C2926/C9956C?text=7'">
-        </div>
-        <div class="gallery-item">
-            <img src="gallery8.jpg" alt="갤러리" onerror="this.src='https://placehold.co/600x800/2C2926/DFBA98?text=8'">
-        </div>
-    </div>
+<div class="wrap">
+  <div class="sec-hd">
+    <div class="pill">Gallery</div>
+    <h2>갤러리</h2>
+  </div>
+  <div class="glry-grid">
+    <div class="glry-item"><img src="gallery1.jpg" alt="갤러리" onerror="this.src='https://placehold.co/800x600/3D1E2C/E8A3B8?text=1'"></div>
+    <div class="glry-item"><img src="gallery2.jpg" alt="갤러리" onerror="this.src='https://placehold.co/600x800/3D1E2C/C4607E?text=2'"></div>
+    <div class="glry-item"><img src="gallery3.jpg" alt="갤러리" onerror="this.src='https://placehold.co/600x800/3D1E2C/E8A3B8?text=3'"></div>
+    <div class="glry-item"><img src="gallery4.jpg" alt="갤러리" onerror="this.src='https://placehold.co/600x800/3D1E2C/C4607E?text=4'"></div>
+    <div class="glry-item"><img src="gallery5.jpg" alt="갤러리" onerror="this.src='https://placehold.co/600x800/3D1E2C/E8A3B8?text=5'"></div>
+    <div class="glry-item"><img src="gallery6.jpg" alt="갤러리" onerror="this.src='https://placehold.co/600x800/3D1E2C/C4607E?text=6'"></div>
+    <div class="glry-item"><img src="gallery7.jpg" alt="갤러리" onerror="this.src='https://placehold.co/600x800/3D1E2C/E8A3B8?text=7'"></div>
+    <div class="glry-item"><img src="gallery8.jpg" alt="갤러리" onerror="this.src='https://placehold.co/600x800/3D1E2C/C4607E?text=8'"></div>
+  </div>
 </div>
-```
-
 </section>
 
 <!-- CONTACT -->
 
 <section id="contact">
-    <div class="container">
-        <div class="contact-header">
-            <div class="section-label">Contact</div>
-            <h2>함께 하실<br>브랜드를 기다립니다</h2>
-            <p class="section-sub">편하신 방법으로 언제든 연락 주세요.</p>
-        </div>
+<div class="wrap">
+  <div class="sec-hd">
+    <div class="pill">Contact</div>
+    <h2>함께 하실<br>브랜드를 기다립니다</h2>
+    <p class="sub">편하신 방법으로 언제든 연락 주세요.</p>
+  </div>
+  <div class="ct-wrap">
 
 ```
-    <div class="contact-wrap">
+<div class="ct-cta">
+  <div class="ct-cta-text">
+    <p>가장 빠른 응답 보장 ⚡</p>
+    <span>평일 기준 2시간 내 답변 드립니다</span>
+  </div>
+  <a href="https://open.kakao.com/YOUR_LINK" class="btn-kakao" target="_blank">
+    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 3C6.48 3 2 6.48 2 10.8c0 2.7 1.56 5.1 3.93 6.6L5 21l4.08-2.13C10.32 19.28 11.16 19.44 12 19.44c5.52 0 10-3.48 10-7.8S17.52 3 12 3z"/></svg>
+    카카오톡 오픈채팅으로 문의하기
+  </a>
+</div>
 
-        <div class="contact-cta">
-            <div class="contact-cta-text">
-                <p>가장 빠른 응답 보장 ⚡</p>
-                <span>평일 기준 2시간 내 답변 드립니다</span>
-            </div>
-            <a href="https://open.kakao.com/YOUR_LINK" class="btn-kakao" target="_blank">
-                <svg viewBox="0 0 24 24" fill="currentColor">
-                    <path d="M12 3C6.48 3 2 6.48 2 10.8c0 2.7 1.56 5.1 3.93 6.6L5 21l4.08-2.13C10.32 19.28 11.16 19.44 12 19.44c5.52 0 10-3.48 10-7.8S17.52 3 12 3z"/>
-                </svg>
-                카카오톡 오픈채팅으로 문의하기
-            </a>
-        </div>
+<a href="mailto:your-email@example.com" class="ct-email">
+  <div class="ct-email-icon">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <rect x="2" y="4" width="20" height="16" rx="2"/>
+      <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/>
+    </svg>
+  </div>
+  <div class="ct-email-text">
+    <strong>your-email@example.com</strong>
+    <span>이메일로 협업 제안하기</span>
+  </div>
+  <div class="ct-email-arrow">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+  </div>
+</a>
 
-        <a href="/cdn-cgi/l/email-protection#f78e988285da929a969e9bb7928f969a879b92d994989a" class="contact-email">
-            <div class="contact-email-icon">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <rect x="2" y="4" width="20" height="16" rx="2"/>
-                    <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/>
-                </svg>
-            </div>
-            <div class="contact-email-text">
-                <strong><span class="__cf_email__" data-cfemail="cdb4a2b8bfe0a8a0aca4a18da8b5aca0bda1a8e3aea2a0">[email&#160;protected]</span></strong>
-                <span>이메일로 협업 제안하기</span>
-            </div>
-            <div class="contact-email-arrow">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                    <path d="M5 12h14M12 5l7 7-7 7"/>
-                </svg>
-            </div>
-        </a>
+<div class="ct-sns">
+  <a href="https://instagram.com/YOUR_ID" class="sns-card ig" target="_blank">
+    <div class="sns-icon ig-bg">
+      <svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg>
+    </div>
+    <div class="sns-lbl">Instagram</div>
+    <div class="sns-sub">@your_id</div>
+  </a>
+  <a href="https://youtube.com/@YOUR_CHANNEL" class="sns-card yt" target="_blank">
+    <div class="sns-icon yt-bg">
+      <svg viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+    </div>
+    <div class="sns-lbl">YouTube</div>
+    <div class="sns-sub">영상 포트폴리오</div>
+  </a>
+</div>
+```
 
-        <div class="contact-sns-row">
-            <a href="https://instagram.com/YOUR_ID" class="sns-card instagram" target="_blank">
-                <div class="sns-icon ig">
-                    <svg viewBox="0 0 24 24">
-                        <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/>
-                    </svg>
-                </div>
-                <div class="sns-card-label">Instagram</div>
-                <div class="sns-card-sub">@your_id</div>
-            </a>
+  </div>
+</div>
+</section>
 
-            <a href="https://youtube.com/@YOUR_CHANNEL" class="sns-card youtube" target="_blank">
-                <div class="sns-icon yt">
-                    <svg viewBox="0 0 24 24">
-                        <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
-                    </svg>
-                </div>
-                <div class="sns-card-label">YouTube</div>
-                <div class="sns-card-sub">영상 포트폴리오</div>
-            </a>
-        <
+</main>
+
+<footer>
+  <p>© 2025 김쇼호. All rights reserved.</p>
+</footer>
+
+</body>
+</html>
