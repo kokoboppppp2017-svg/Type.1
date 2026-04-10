@@ -28,8 +28,8 @@ html { scroll-behavior: smooth; }
 
 body {
 font-family: “Pretendard”, sans-serif;
-background: var(–bg);
-color: var(–text);
+background: #FDF5F0;
+color: #2A1520;
 overflow-x: hidden;
 word-break: keep-all;
 -webkit-text-size-adjust: 100%;
@@ -50,7 +50,7 @@ font-size: 10px;
 font-weight: 700;
 letter-spacing: 0.2em;
 text-transform: uppercase;
-color: var(–pink-dk);
+color: #9E3D5C;
 background: rgba(196,96,126,0.1);
 border: 1px solid rgba(196,96,126,0.25);
 padding: 4px 12px;
@@ -62,18 +62,18 @@ h2 {
 font-size: 24px;
 font-weight: 900;
 line-height: 1.2;
-color: var(–plum);
+color: #3D1E2C;
 margin-bottom: 8px;
 }
 
 .sub {
 font-size: 14px;
-color: var(–muted);
+color: #8A6272;
 line-height: 1.75;
 margin-bottom: 28px;
 }
 
-/* ====== HEADER ====== */
+/* HEADER */
 header {
 position: sticky;
 top: 0;
@@ -81,7 +81,7 @@ z-index: 100;
 background: rgba(253,245,240,0.93);
 backdrop-filter: blur(16px);
 -webkit-backdrop-filter: blur(16px);
-border-bottom: 1px solid var(–border);
+border-bottom: 1px solid rgba(196,96,126,0.15);
 }
 
 .hd-inner {
@@ -95,7 +95,7 @@ nav { display: flex; gap: 24px; }
 
 nav a {
 text-decoration: none;
-color: var(–muted);
+color: #8A6272;
 font-size: 13px;
 font-weight: 600;
 letter-spacing: 0.03em;
@@ -109,29 +109,28 @@ content: ‘’;
 position: absolute;
 bottom: -1px; left: 0;
 width: 0; height: 2px;
-background: var(–pink);
+background: #C4607E;
 border-radius: 2px;
 transition: width 0.25s;
 }
 
-nav a:hover { color: var(–plum); }
+nav a:hover { color: #3D1E2C; }
 nav a:hover::after { width: 100%; }
 
-/* ====== HERO ====== */
+/* HERO */
 .hero {
 padding: 36px 0 52px;
-background: var(–bg);
+background: #FDF5F0;
 }
 
-/* 대표 영상 */
 .feat-link {
 display: block;
 text-decoration: none;
 position: relative;
 width: 100%;
-border-radius: var(–r);
+border-radius: 14px;
 overflow: hidden;
-background: var(–plum);
+background: #3D1E2C;
 box-shadow: 0 16px 48px rgba(61,30,44,0.2);
 transition: transform 0.35s ease, box-shadow 0.35s ease;
 }
@@ -141,7 +140,6 @@ transform: translateY(-4px);
 box-shadow: 0 24px 64px rgba(61,30,44,0.28);
 }
 
-/* padding-top trick for 16:9 — works on all mobile browsers */
 .feat-ratio {
 position: relative;
 width: 100%;
@@ -164,33 +162,17 @@ position: absolute;
 top: 0; left: 0; right: 0; bottom: 0;
 background: linear-gradient(
 150deg,
-rgba(61,30,44,0.45) 0%,
-rgba(61,30,44,0.05) 50%,
-rgba(196,96,126,0.25) 100%
+rgba(61,30,44,0.35) 0%,
+rgba(61,30,44,0.02) 50%,
+rgba(196,96,126,0.18) 100%
 );
 }
-
-.play-btn {
-position: absolute;
-top: 50%; left: 50%;
-transform: translate(-50%, -50%);
-width: 64px; height: 64px;
-border-radius: 50%;
-background: rgba(255,255,255,0.95);
-display: flex; align-items: center; justify-content: center;
-box-shadow: 0 8px 28px rgba(61,30,44,0.3);
-transition: transform 0.3s cubic-bezier(.22,.68,0,1.5);
-}
-
-.feat-link:hover .play-btn { transform: translate(-50%, -50%) scale(1.12); }
-
-.play-btn svg { width: 26px; height: 26px; fill: var(–pink-dk); margin-left: 4px; }
 
 .feat-meta {
 position: absolute;
 bottom: 0; left: 0; right: 0;
 padding: 32px 18px 18px;
-background: linear-gradient(to top, rgba(61,30,44,0.8) 0%, transparent 100%);
+background: linear-gradient(to top, rgba(61,30,44,0.75) 0%, transparent 100%);
 }
 
 .feat-cat {
@@ -198,7 +180,7 @@ font-size: 10px;
 font-weight: 700;
 letter-spacing: 0.2em;
 text-transform: uppercase;
-color: var(–pink-lt);
+color: #E8A3B8;
 margin-bottom: 4px;
 }
 
@@ -222,7 +204,6 @@ padding: 5px 11px 5px 8px;
 .yt-tag svg { width: 14px; height: 14px; fill: #ff0000; }
 .yt-tag span { font-size: 11px; font-weight: 700; color: #fff; }
 
-/* 이름 영역 */
 .hero-id {
 margin-top: 28px;
 text-align: center;
@@ -233,7 +214,7 @@ font-size: 10px;
 font-weight: 700;
 letter-spacing: 0.22em;
 text-transform: uppercase;
-color: var(–pink);
+color: #C4607E;
 margin-bottom: 8px;
 }
 
@@ -242,7 +223,7 @@ font-size: clamp(3rem, 11vw, 5rem);
 font-weight: 900;
 line-height: 1;
 letter-spacing: -0.03em;
-color: var(–plum);
+color: #3D1E2C;
 margin-bottom: 16px;
 }
 
@@ -250,11 +231,11 @@ margin-bottom: 16px;
 display: inline-block;
 font-size: 13px;
 font-weight: 800;
-color: var(–plum);
+color: #3D1E2C;
 background: rgba(196,96,126,0.1);
-border-left: 3px solid var(–pink);
+border-left: 3px solid #C4607E;
 padding: 10px 16px;
-border-radius: 0 var(–r-sm) var(–r-sm) 0;
+border-radius: 0 9px 9px 0;
 text-align: left;
 margin-bottom: 18px;
 max-width: 100%;
@@ -262,7 +243,7 @@ max-width: 100%;
 
 .hero-tagline {
 font-size: 14px;
-color: var(–muted);
+color: #8A6272;
 line-height: 1.75;
 margin-bottom: 20px;
 }
@@ -277,21 +258,21 @@ justify-content: center;
 .badge {
 background: rgba(61,30,44,0.07);
 border: 1px solid rgba(61,30,44,0.12);
-color: var(–muted);
+color: #8A6272;
 padding: 5px 12px;
 border-radius: 99px;
 font-size: 12px;
 font-weight: 600;
 }
 
-/* ====== STRENGTHS ====== */
+/* STRENGTHS */
 #strengths {
-background: var(–plum);
+background: #3D1E2C;
 padding: 60px 0;
 }
 
 #strengths .pill {
-color: var(–pink-lt);
+color: #E8A3B8;
 background: rgba(232,163,184,0.15);
 border-color: rgba(232,163,184,0.3);
 }
@@ -310,7 +291,7 @@ gap: 10px;
 .stat-card {
 background: rgba(255,255,255,0.07);
 border: 1px solid rgba(255,255,255,0.1);
-border-radius: var(–r);
+border-radius: 14px;
 padding: 22px 16px;
 text-align: center;
 position: relative;
@@ -323,7 +304,7 @@ content: ‘’;
 position: absolute;
 top: 0; left: 0; right: 0;
 height: 2px;
-background: linear-gradient(90deg, var(–pink), var(–pink-lt));
+background: linear-gradient(90deg, #C4607E, #E8A3B8);
 opacity: 0;
 transition: opacity 0.2s;
 }
@@ -334,7 +315,7 @@ transition: opacity 0.2s;
 .stat-num {
 font-size: 2.2rem;
 font-weight: 900;
-color: var(–pink-lt);
+color: #E8A3B8;
 line-height: 1;
 margin-bottom: 8px;
 }
@@ -354,17 +335,17 @@ color: rgba(248,238,243,0.45);
 line-height: 1.5;
 }
 
-/* ====== CAREER ====== */
-#career { background: var(–bg2); }
+/* CAREER */
+#career { background: #F5EBE4; }
 
 .sec-hd { text-align: center; margin-bottom: 28px; }
 
 .career-grid { display: grid; gap: 12px; }
 
 .cblock {
-background: var(–card);
-border: 1px solid var(–border);
-border-radius: var(–r);
+background: #FFFFFF;
+border: 1px solid rgba(196,96,126,0.15);
+border-radius: 14px;
 padding: 20px;
 }
 
@@ -373,7 +354,7 @@ font-size: 10px;
 font-weight: 800;
 letter-spacing: 0.18em;
 text-transform: uppercase;
-color: var(–pink-dk);
+color: #9E3D5C;
 margin-bottom: 14px;
 }
 
@@ -382,7 +363,7 @@ list-style: none;
 display: flex;
 gap: 12px;
 padding: 11px 0;
-border-bottom: 1px solid var(–border);
+border-bottom: 1px solid rgba(196,96,126,0.15);
 align-items: flex-start;
 }
 
@@ -392,7 +373,7 @@ align-items: flex-start;
 .cyear {
 font-size: 11px;
 font-weight: 700;
-color: var(–pink);
+color: #C4607E;
 white-space: nowrap;
 margin-top: 2px;
 min-width: 74px;
@@ -402,11 +383,11 @@ min-width: 74px;
 display: block;
 font-size: 13px;
 font-weight: 700;
-color: var(–plum);
+color: #3D1E2C;
 margin-bottom: 2px;
 }
 
-.cdesc span { font-size: 12px; color: var(–muted); }
+.cdesc span { font-size: 12px; color: #8A6272; }
 
 .alist li {
 list-style: none;
@@ -414,10 +395,10 @@ display: flex;
 align-items: flex-start;
 gap: 9px;
 padding: 9px 0;
-border-bottom: 1px solid var(–border);
+border-bottom: 1px solid rgba(196,96,126,0.15);
 font-size: 13px;
 line-height: 1.55;
-color: var(–muted);
+color: #8A6272;
 }
 
 .alist li:last-child { border-bottom: none; padding-bottom: 0; }
@@ -425,20 +406,20 @@ color: var(–muted);
 
 .alist li::before {
 content: ‘✦’;
-color: var(–pink);
+color: #C4607E;
 font-size: 9px;
 margin-top: 5px;
 flex-shrink: 0;
 }
 
-/* ====== VIDEOS ====== */
+/* VIDEOS */
 #videos {
-background: var(–plum);
+background: #3D1E2C;
 padding: 60px 0;
 }
 
 #videos .pill {
-color: var(–pink-lt);
+color: #E8A3B8;
 background: rgba(232,163,184,0.15);
 border-color: rgba(232,163,184,0.3);
 }
@@ -463,13 +444,12 @@ padding-bottom: 4px;
 .vcard {
 flex: 0 0 160px;
 scroll-snap-align: start;
-border-radius: var(–r);
+border-radius: 14px;
 overflow: hidden;
 background: rgba(255,255,255,0.06);
 border: 1px solid rgba(255,255,255,0.1);
 }
 
-/* 9:16 세로 — padding-top trick */
 .vframe {
 position: relative;
 width: 100%;
@@ -490,7 +470,7 @@ border: none;
 font-size: 9px;
 font-weight: 700;
 letter-spacing: 0.14em;
-color: var(–pink-lt);
+color: #E8A3B8;
 text-transform: uppercase;
 margin-bottom: 3px;
 }
@@ -502,8 +482,8 @@ color: rgba(248,238,243,0.9);
 line-height: 1.4;
 }
 
-/* ====== GALLERY ====== */
-#gallery { background: var(–bg); }
+/* GALLERY */
+#gallery { background: #FDF5F0; }
 
 .glry-grid {
 display: grid;
@@ -512,10 +492,10 @@ gap: 8px;
 }
 
 .glry-item {
-border-radius: var(–r-sm);
+border-radius: 9px;
 overflow: hidden;
 aspect-ratio: 3/4;
-background: var(–bg2);
+background: #F5EBE4;
 }
 
 .glry-item img {
@@ -532,9 +512,9 @@ grid-column: 1 / -1;
 aspect-ratio: 4/3;
 }
 
-/* ====== CONTACT ====== */
+/* CONTACT */
 #contact {
-background: var(–bg2);
+background: #F5EBE4;
 padding-bottom: 80px;
 }
 
@@ -547,8 +527,8 @@ margin: 0 auto;
 }
 
 .ct-cta {
-background: var(–plum);
-border-radius: var(–r);
+background: #3D1E2C;
+border-radius: 14px;
 padding: 24px 20px;
 display: flex;
 flex-direction: column;
@@ -578,7 +558,7 @@ text-decoration: none;
 font-weight: 800;
 font-size: 14px;
 padding: 13px 20px;
-border-radius: var(–r-sm);
+border-radius: 9px;
 transition: opacity 0.2s, transform 0.15s;
 }
 
@@ -589,9 +569,9 @@ transition: opacity 0.2s, transform 0.15s;
 display: flex;
 align-items: center;
 gap: 14px;
-background: var(–card);
-border: 1px solid var(–border);
-border-radius: var(–r);
+background: #FFFFFF;
+border: 1px solid rgba(196,96,126,0.15);
+border-radius: 14px;
 padding: 16px 18px;
 text-decoration: none;
 transition: border-color 0.2s, transform 0.15s;
@@ -610,17 +590,17 @@ display: flex; align-items: center; justify-content: center;
 flex-shrink: 0;
 }
 
-.ct-email-icon svg { width: 20px; height: 20px; stroke: var(–pink-dk); }
+.ct-email-icon svg { width: 20px; height: 20px; stroke: #9E3D5C; }
 
 .ct-email-text strong {
 display: block;
 font-size: 13px;
 font-weight: 700;
-color: var(–plum);
+color: #3D1E2C;
 }
 
-.ct-email-text span { font-size: 12px; color: var(–muted); }
-.ct-email-arrow { margin-left: auto; color: var(–muted2); }
+.ct-email-text span { font-size: 12px; color: #8A6272; }
+.ct-email-arrow { margin-left: auto; color: #BBA0AE; }
 
 .ct-sns { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
 
@@ -629,9 +609,9 @@ display: flex;
 flex-direction: column;
 align-items: center;
 gap: 9px;
-background: var(–card);
-border: 1px solid var(–border);
-border-radius: var(–r);
+background: #FFFFFF;
+border: 1px solid rgba(196,96,126,0.15);
+border-radius: 14px;
 padding: 18px 14px;
 text-decoration: none;
 transition: border-color 0.2s, transform 0.15s;
@@ -651,19 +631,19 @@ display: flex; align-items: center; justify-content: center;
 .sns-icon.yt-bg { background: #ff0000; }
 .sns-icon svg { width: 24px; height: 24px; fill: #fff; }
 
-.sns-lbl { font-size: 13px; font-weight: 800; color: var(–plum); }
-.sns-sub { font-size: 11px; color: var(–muted); }
+.sns-lbl { font-size: 13px; font-weight: 800; color: #3D1E2C; }
+.sns-sub { font-size: 11px; color: #8A6272; }
 
-/* ====== FOOTER ====== */
+/* FOOTER */
 footer {
 text-align: center;
 padding: 22px 20px;
-background: var(–plum);
+background: #3D1E2C;
 font-size: 12px;
 color: rgba(248,238,243,0.3);
 }
 
-/* ====== PC 768px+ ====== */
+/* PC 768px+ */
 @media (min-width: 768px) {
 section { padding: 96px 0; }
 #strengths, #videos { padding: 96px 0; }
@@ -671,13 +651,9 @@ h2 { font-size: 32px; }
 
 .hero-id { text-align: left; }
 .badges { justify-content: flex-start; }
-
-.play-btn { width: 80px; height: 80px; }
-.play-btn svg { width: 32px; height: 32px; }
 .feat-title { font-size: 20px; }
 
 .stats-grid { grid-template-columns: repeat(4, 1fr); }
-
 .career-grid { grid-template-columns: 1fr 1fr; }
 
 .vids-scroll {
@@ -719,8 +695,6 @@ padding-bottom: 0;
 
 <main>
 
-<!-- HERO -->
-
 <section class="hero">
 <div class="wrap">
 
@@ -760,8 +734,6 @@ padding-bottom: 0;
 </div>
 </section>
 
-<!-- STRENGTHS -->
-
 <section id="strengths">
 <div class="wrap">
   <div class="stats-hd">
@@ -793,8 +765,6 @@ padding-bottom: 0;
   </div>
 </div>
 </section>
-
-<!-- CAREER -->
 
 <section id="career">
 <div class="wrap">
@@ -842,8 +812,6 @@ padding-bottom: 0;
   </div>
 </div>
 </section>
-
-<!-- VIDEOS -->
 
 <section id="videos">
 <div class="wrap">
@@ -893,8 +861,6 @@ padding-bottom: 0;
 </div>
 </section>
 
-<!-- GALLERY -->
-
 <section id="gallery">
 <div class="wrap">
   <div class="sec-hd">
@@ -913,8 +879,6 @@ padding-bottom: 0;
   </div>
 </div>
 </section>
-
-<!-- CONTACT -->
 
 <section id="contact">
 <div class="wrap">
@@ -969,7 +933,7 @@ padding-bottom: 0;
     <div class="sns-sub">영상 포트폴리오</div>
   </a>
 </div>
-```
+
 
   </div>
 </div>
